@@ -63,4 +63,5 @@ esac
 
 # Set prompt user@host dir
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
+PS1="[\[\033[0;34m\]\u@\h\[\033[1;32m\] \w\[\033[0;37m\]]$ "
