@@ -65,7 +65,12 @@ case ${TERM} in
 esac
 
 # Set prompt user@host dir with git
-PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 source /usr/share/git/completion/git-prompt.sh
+update_PS1 () {
+    PS1="[\[\033[1;34m\]\u@\h\[\033[1;32m\] \w\[\033[1;33m\]$(__git_ps1 " %s")\[\033[0;37m\]]$ "
+}
+shopt -u promptvars
+PROMPT_COMMAND=update_PS1
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 #PS1='[\u@\h \W]\$ '
 PS1="[\[\033[1;34m\]\u@\h\[\033[1;32m\] \w\[\033[1;33m\]$(__git_ps1 " %s")\[\033[0;37m\]]$ "
