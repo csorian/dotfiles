@@ -25,15 +25,20 @@ set showmatch
 set showcmd
 
 " Spelling 
-set spelllang=en_gb
-autocmd BufRead,BufNewFile *.txt,*.md setlocal spell
+"set spelllang=en_gb
+"autocmd BufRead,BufNewFile *.txt,*.text,*.md setlocal spell
 
 " Searching
 set incsearch
 set hlsearch
 
-" Line length and Wrapping
-set textwidth=78
-set wrap
-autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg','\%>78v.\+',-1)
-autocmd BufRead,BufNewFile *.txt,*.md setlocal linebreak
+" Wrapping
+set nowrap
+
+""""" FIXME """""
+
+"" Line length and Wrapping
+"set textwidth=78
+"set wrap
+"autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg','\%>78v.\+',-1)
+"autocmd BufRead,BufNewFile *.txt,*.md setlocal linebreak
