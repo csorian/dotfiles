@@ -17,7 +17,7 @@ fi
 
 # If $HOME/.local/bin exists and isn't on $PATH, append it
 if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
-  PATH=$PATH:$HOME/.local/bin
+  PATH=$HOME/.local/bin:$PATH
 fi
 
 # dotfiles local repo location
