@@ -48,6 +48,9 @@ alias ls='ls --color=auto -N'
 alias rmed='find -type d -empty -delete'
 alias powertop='sudo powertop'
 
+# Define lazy aliases
+alias polity='/usr/bin/ssh csorian@104.245.37.228 -p 7822'
+
 # Change the window title of X terminals 
 case ${TERM} in
 	[aEkx]term*|rxvt*|gnome*|konsole*|interix)
@@ -61,7 +64,10 @@ case ${TERM} in
 		;;
 esac
 
-# Set prompt user@host dir
+# Set prompt user@host dir with git
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+source /usr/share/git/completion/git-prompt.sh
+
 #PS1='[\u@\h \W]\$ '
-PS1="[\[\033[0;34m\]\u@\h\[\033[1;32m\] \w\[\033[0;37m\]]$ "
+PS1="[\[\033[1;34m\]\u@\h\[\033[1;32m\] \w\[\033[1;33m\]$(__git_ps1 " %s")\[\033[0;37m\]]$ "
