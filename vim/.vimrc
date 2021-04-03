@@ -1,8 +1,18 @@
 " ~/.vimrc
 " user:csorian
 
+" Not vi
+set nocompatible
+
 " Colours
 set background=dark
+set t_Co=256
+
+" Airline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Syntax highlighting
 filetype plugin on
@@ -19,12 +29,16 @@ set smartindent
 set clipboard=unnamedplus
 
 " Status / Location
-set number
+set number relativenumber
 set ruler
 set showmatch
 set showcmd
 
-" Spelling 
+" Fuzzy Find
+set path+=**
+set wildmenu
+
+" Spelling
 "set spelllang=en_gb
 "autocmd BufRead,BufNewFile *.txt,*.text,*.md setlocal spell
 
