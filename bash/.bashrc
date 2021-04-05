@@ -10,14 +10,14 @@ if [ "$TERM" == "linux" ]; then
   setterm -blank 10
 fi
 
-# If $HOME/bin exists and isn't on $PATH, prepend it
-if [ -d "$HOME/bin" ] && [[ ":$PATH:" != *":$HOME/bin:"* ]]; then
-  PATH=$HOME/bin:$PATH
-fi
-
-# If $HOME/.local/bin exists and isn't on $PATH, append it
+# If $HOME/.local/bin exists and isn't on $PATH, prepend it
 if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
   PATH=$HOME/.local/bin:$PATH
+fi
+
+# If $HOME/.local/scripts exists and isn't on $PATH, append it
+if [ -d "$HOME/.local/scripts" ] && [[ ":$PATH:" != *":$HOME/.local/scripts:"* ]]; then
+  PATH=$PATH:$HOME/.local/scripts
 fi
 
 # dotfiles local repo location
@@ -30,8 +30,8 @@ export DOT=$HOME/.dotfiles
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 export HISTFILESIZE=20000
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 

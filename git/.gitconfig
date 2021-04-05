@@ -1,0 +1,13 @@
+[user]
+	name = Csorian
+	email = inbox@csorian.uk
+[core]
+	autocrlf = input
+	safecrlf = warn
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[init]
+	defaultBranch = master
