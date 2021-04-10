@@ -34,6 +34,7 @@ export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export LANG=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
+export STOW_DIR=${DOT}
 
 # Set bash options
 shopt -s histappend
@@ -51,17 +52,17 @@ alias powertop='sudo powertop'
 # Define lazy aliases
 alias polity='/usr/bin/ssh csorian@104.245.37.228 -p 7822'
 
-# Change the window title of X terminals 
+# Change the window title of X terminals
 case ${TERM} in
-	[aEkx]term*|rxvt*|gnome*|konsole*|interix)
-		PS1='\[\033]0;\u@\h:\w\007\]'
-		;;
-	screen*)
-		PS1='\[\033k\u@\h:\w\033\\\]'
-		;;
-	*)
-		unset PS1
-		;;
+    [aEkx]term*|rxvt*|gnome*|konsole*|interix)
+        PS1='\[\033]0;\u@\h:\w\007\]'
+        ;;
+    screen*)
+        PS1='\[\033k\u@\h:\w\033\\\]'
+        ;;
+    *)
+        unset PS1
+        ;;
 esac
 
 # Set prompt user@host dir with git
