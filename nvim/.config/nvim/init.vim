@@ -12,6 +12,7 @@ endif
 " Plugins
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
     Plug 'vim-airline/vim-airline'
+    Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
     Plug 'ap/vim-css-color'
@@ -49,10 +50,10 @@ set encoding=utf-8
 
 " Splits
 set splitbelow splitright
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Fuzzy File Find
 set path+=**

@@ -1,7 +1,9 @@
 # ncmpcpp config
 # user:csorian
 
-ncmpcpp_directory = "~/.config/ncmpcpp"
+ncmpcpp_directory = "~/.local/share/ncmpcpp"
+autocenter_mode = yes
+centered_cursor = yes
 
 # MPD Settings
 
