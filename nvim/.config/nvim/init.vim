@@ -16,6 +16,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-commentary'
     Plug 'ap/vim-css-color'
+    Plug 'dhruvasagar/vim-dotoo'
     "Plug 'jreybert/vimagit'
 call plug#end()
 
@@ -40,6 +41,10 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ' '
 let g:airline_symbols.whitespace = ''
 
+" Configure dotoo
+let g:dotoo#agenda#files = '~/Sync/org-files/**/**'
+let g:dotoo#capture#refile = '~/Sync/org-files/refile.org'
+
 " Not vi
 set nocompatible
 
@@ -47,6 +52,7 @@ set nocompatible
 set background=dark
 set t_Co=256
 set encoding=utf-8
+set hidden
 
 " Splits
 set splitbelow splitright
